@@ -11,8 +11,8 @@ public class BookMain {
             Scanner scanner = new Scanner(System.in);
 
             System.out.println("Regisztrációs szám:");
-            String name = scanner.nextLine();
-            book.setRegNumber(name);
+            String regnumber = scanner.nextLine();
+            book.setRegNumber(regnumber);
 
             System.out.println(book.getAuthor());
             System.out.println(book.getTitle());
