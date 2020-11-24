@@ -48,6 +48,11 @@ public class ClassRecords {
         Double count = 0.0;
         MarkType jegy;
 
+        if (students.size() <1) {
+            throw new ArithmeticException("No student in the class, average calculation aborted!");
+            //return average;
+        }
+
         for (Student stud: students) {
             marks = stud.getMarks();
             for (Mark mark: marks) {
@@ -76,6 +81,7 @@ public class ClassRecords {
 
         if (count < 1.0) {
             classAverage = 0.0;
+            throw new ArithmeticException("No marks present, average calculation aborted!");
         } else classAverage = Double.valueOf(Math.round(100*(average / count)))/100;
 
         return classAverage;
@@ -120,6 +126,7 @@ public class ClassRecords {
 
         if (count < 1.0) {
             subjectAverage = 0.0;
+            throw new ArithmeticException("No marks present, average calculation aborted!");
         } else subjectAverage = Double.valueOf(Math.round(100*(average / count)))/100;
 
         return subjectAverage;

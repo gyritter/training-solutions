@@ -1,5 +1,7 @@
 package schoolrecords;
 
+import algorithmssum.TransactionOperation;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,13 +11,13 @@ public class Student {
     private List<Mark> marks = new ArrayList<>();
 
     public Student(String name, List<Mark> marks) {
-//        if (isEmpty(name)) {
-//            throw new IllegalArgumentException("The name should be filled with valid data");
- //       } else {
- //           this.name = name;}
-        this.name = name;
 
-        if (marks == null) {
+        if (isEmpty(name)) {
+            throw new IllegalArgumentException("Student name must not be empty!");
+        } else {
+            this.name = name;}
+
+        if (marks.size() < 1) {
             throw new NullPointerException("Mark must not be null!");
         } else {
             this.marks = marks;}
@@ -23,16 +25,15 @@ public class Student {
 
     public boolean isEmpty(String str) {
         if ((str == null) || (str.length() <1)) {
-            return false;
-        } else return true;
+            return true;
+        } else return false;
     }
 
     public Student(String name) {
-        this.name = name;
-//        if (isEmpty(name)) {
-//            throw new IllegalArgumentException("The name should be filled with valid data");
-//        } else {
-//            this.name = name;}
+        if (isEmpty(name)) {
+            throw new IllegalArgumentException("Student name must not be empty!");
+        } else {
+            this.name = name;}
    }
 
     public String getName() {
