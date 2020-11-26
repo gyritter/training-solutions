@@ -15,7 +15,7 @@ public class Store {
         Product product = new Product(name, year, month, day);
         Boolean answer = true;
         for (Product check: store) {
-            if(product.getExpiryDate().isBefore(LocalDate.now()) && check.getName().equals(product.getName())){
+            if(product.getExpiryDate().isBefore(LocalDate.now()) || check.getName().equals(product.getName())){
                answer=false;
             } else store.add(product);
         }
