@@ -1,11 +1,10 @@
 package week05d03;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ListCounter {
 
-    private static int ListCounter(List<String> words){
+    public int listCounter(List<String> words){
 
         int count = 0;
         String first = "";
@@ -17,25 +16,5 @@ public class ListCounter {
             }
         }
         return count;
-    }
-
-    public static void main(String[] args) {
-
-        List<String> words = new ArrayList<>();
-
-        System.out.println(ListCounter(words));
-
-        words.add("barack");
-        words.add("körte");
-        words.add("álkörmös");
-        words.add("meggy");
-        words.add("cseresznye");
-
-        System.out.println(ListCounter(words));
-
-        words.add("Alma");
-        words.add("almabor");
-
-        System.out.println(ListCounter(words));
     }
 }

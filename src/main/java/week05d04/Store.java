@@ -1,8 +1,5 @@
 package week05d04;
 
-import schoolrecords.Subject;
-import schoolrecords.Tutor;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,7 +20,8 @@ public class Store {
     }
 
     public int getNumberOfExpired() {
-
+        //Product product= new Product("wheat", 2020, 05, 30);
+       // store.add(product);
         int count = 0;
 
         for (Product check : store) {
@@ -36,13 +34,13 @@ public class Store {
 
     public static void main(String[] args) {
         Store store = new Store();
-        addProduct("wheat", 2020, 05, 30);
-        addProduct("wheat", 2020, 05, 30);
-        addProduct("salt", 3030, 10, 15);
-        addProduct("sugar", 2030, 03, 10);
-        addProduct("oil", 2023, 05, 30);
+        store.addProduct("wheat", 2020, 05, 30);
+        store.addProduct("wheat", 2020, 05, 30);
+        store.addProduct("salt", 3030, 10, 15);
+        store.addProduct("sugar", 2030, 03, 10);
+        store.addProduct("oil", 2023, 05, 30);
 
-        System.out.println(Store.getNumberOfExpired());
+        System.out.println(store.getNumberOfExpired());
 
     }
 }

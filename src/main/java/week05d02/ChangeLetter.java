@@ -18,5 +18,11 @@ public class ChangeLetter {
 
         }
         return result;
+
+    }
+
+    public static void main(String[] args) {
+        ChangeLetter changeLetter=new ChangeLetter();
+        System.out.println(changeLetter.changeVowels("kiskutya"));
     }
 }
