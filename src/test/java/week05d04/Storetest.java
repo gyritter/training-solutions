@@ -17,7 +17,7 @@ public class Storetest {
         store.addProduct("sugar", 2030, 03, 10);
         store.addProduct("oil", 2023, 05, 30);
 
-        assertEquals(1, store.getNumberOfExpired());
+        assertEquals(0, store.getNumberOfExpired());
         //ahhoz, hogy jól fusson a // jeleket ki kell venni a Store.java-ból
 
     }
