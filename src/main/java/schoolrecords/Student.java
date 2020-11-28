@@ -14,14 +14,13 @@ public class Student {
 
         if (isEmpty(name)) {
             throw new IllegalArgumentException("Student name must not be empty!");
-        } else {
-            this.name = name;}
-
-        if (marks.size() < 1) {
+        }
+        this.name = name;
+        System.out.println(marks);
+        if (marks == null) {
             throw new NullPointerException("Mark must not be null!");
-        } else {
-            this.marks = marks;}
-    }
+        }
+        this.marks = marks;}
 
     public boolean isEmpty(String str) {
         if ((str == null) || (str.length() <1)) {

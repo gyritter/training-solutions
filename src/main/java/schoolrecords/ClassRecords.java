@@ -134,12 +134,23 @@ public class ClassRecords {
 
     public Student findStudentByName(String studentName) {
 
-        Student found = new Student("nincs");
+        if(studentName==null || studentName.isBlank()){
+            throw new IllegalArgumentException("Student name must not be empty!");
+        }
+
+        if(students.size()<1){
+            throw new IllegalStateException("No students to search!");
+        }
+
+        Student found = new Student("nincs ilyen");
 
         for (Student stud: students) {
             if (stud.getName().equals(studentName)) {
                 found = stud;
             }
+        }
+        if(found.getName().equals("nincs ilyen")){
+            throw new IllegalArgumentException("Student by this name cannot be found! " +studentName);
         }
         return found;
     }
