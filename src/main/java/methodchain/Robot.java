@@ -28,7 +28,7 @@ public class Robot {
     }
 
     public Robot rotate(int angle){
-        azimut = azimut + angle;
+        azimut += angle;
         azimut = azimut % 360;
         return this;
     }
