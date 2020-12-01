@@ -1,5 +1,7 @@
 package week06d02;
 
+import jdk.jfr.Category;
+
 import java.util.List;
 
 public class Store {
@@ -10,11 +12,11 @@ public class Store {
         this.productlist = productlist;
     }
 
-    public int getProductByCategoryName(String category){
+    public int getProductByCategoryName(ProductCategory category){
 
         int count = 0;
         for(Product product: productlist){
-            if(product.getCategory().equals(category)){
+            if(product.getCategory() == category){
                 count++;
             }
         }
