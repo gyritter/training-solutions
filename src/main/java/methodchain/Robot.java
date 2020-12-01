@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Robot {
 
-    private int distance = 0;
-    private int azimut = 0;
+    private int distance;
+    private int azimut;
 
     private List<NavigationPoint> points = new ArrayList<>();
 
