@@ -1,6 +1,5 @@
 package week06d02;
 
-import jdk.jfr.Category;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

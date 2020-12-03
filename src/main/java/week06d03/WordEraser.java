@@ -1,24 +1,37 @@
 package week06d03;
 
+import java.util.Scanner;
+
 public class WordEraser {
 
-    public String eraseWord(String words, String word){
-        String del = word + " ";
-        int begin = 0;
-        int end = 0;
-        int wordLength = word.length() + 2;
-
+    public String eraseWord(String words, String word) {
+        String[] temp = words.split(" ");
         StringBuilder newString = new StringBuilder("");
-
-        while (end>=0) {
-            end = words.indexOf(del);
-            if (end>0){
-                newString.append(words.substring(begin, end));
-                begin = end + wordLength;
+        for(String s:temp){
+            if(!s.equals(word)){
+                newString.append(s+" ");
             }
-            newString.append(words.substring(begin));
         }
-        return newString.toString();
+
+        return newString.toString().trim();
     }
+
+    public String eraseWordWithScanner(String words, String word) {
+        Scanner scanner=new Scanner(words);
+
+        StringBuilder result = new StringBuilder();
+
+        while (scanner.hasNext()) {
+            String s = scanner.next();
+            if (!word.equals(s))  {
+                result.append(s).append(" ");
+            }
+        }
+        return result.toString().trim();
+
+
+    }
+
+
 }
 

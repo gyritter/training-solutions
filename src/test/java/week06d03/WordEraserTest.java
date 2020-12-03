@@ -6,9 +6,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WordEraserTest {
 
-    @Test
-    public void testEraser(){
+     @Test
+     public void testEraser(){
 
-        assertEquals("nagy ember állat kiskert", new WordEraser().eraseWord("kis ember nagy ember kis állat kiskert", "kis"));
+       assertEquals("ember nagy ember állat kiskert", new WordEraser().eraseWord("kis ember nagy ember kis állat kiskert", "kis"));
+       assertEquals("ember nagy ember állat kiskert", new WordEraser().eraseWordWithScanner("kis ember nagy ember kis állat kiskert", "kis"));
     }
 }
