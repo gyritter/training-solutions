@@ -7,7 +7,7 @@ public class SimpleDate {
     private int day;
 
     public void setDate(int year, int month, int day) {
-        if(!isCorrect(year, month, day)) {
+        if(isCorrect(year, month, day)) {
             throw new IllegalArgumentException("One or more given parameter cannot be applied! " + year + ", " + month + ", " + day);
         }
         this.year = year;
@@ -28,12 +28,9 @@ public class SimpleDate {
     }
 
     private boolean isCorrect(int year, int month, int day) {
-        boolean decision = true;
-        if (year < 1900) decision = false;
-        if (decision) {
-            if (month < 1 || month > 12) decision = false;
-        }
-        if (decision) {
+        boolean decision = false;
+        if (year < 1900) decision = true;
+            if (month < 1 || month > 12) decision = true;
             switch (month) {
                 case 1:
                 case 3:
@@ -42,29 +39,25 @@ public class SimpleDate {
                 case 8:
                 case 10:
                 case 12:
-                    if (day < 1 || day > 31) decision = false;
+                    if (day < 1 || day > 31) decision = true;
                     break;
                 case 4:
                 case 6:
                 case 9:
                 case 11:
-                    if (day < 1 || day > 30) decision = false;
+                    if (day < 1 || day > 30) decision = true;
                     break;
                 case 2:
                     int d = 28;
-                    boolean y = isLeapYear(year);
-                    if (y) d = 29;
-                if (day < 1 || day > d) decision = false;
-                break;
+                    if (isLeapYear(year)) {
+                        d = 29;
+                    }
+                if (day < 1 || day > d) decision = true;
             }
-        }
         return decision;
     }
 
     private boolean isLeapYear(int year) {
-        if (year % 4 == 0 || year % 400 == 0) {
-            return true;
-        }
-        return false;
+        return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
     }
 }
