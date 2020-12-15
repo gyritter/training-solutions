@@ -7,7 +7,7 @@ import java.util.Random;
 public class Lottery {
 
    private List<Integer> lottery =new ArrayList<>();
-   Random rnd= new Random();
+   Random rnd= new Random(5);
 
     public List getNumbers(int interval, int numbers){
         lottery.add(draw(interval));
