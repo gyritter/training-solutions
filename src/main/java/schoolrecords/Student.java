@@ -16,7 +16,7 @@ public class Student {
             throw new IllegalArgumentException("Student name must not be empty!");
         }
         this.name = name;
-        System.out.println(marks);
+
         if (marks == null) {
             throw new NullPointerException("Mark must not be null!");
         }
