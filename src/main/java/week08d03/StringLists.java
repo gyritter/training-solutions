@@ -7,27 +7,21 @@ import java.util.List;
 public class StringLists {
 
     public List stringListsUnion(List<String> first, List<String> second) {
-        List<String> result = new ArrayList<>(first.size() + second.size());
+        List<String> result = new ArrayList<>();
         boolean cont;
         int i;
-        for (String a:first){
-            result.add(a);
+        result.add(first.get(0));
+
+        for (String a : first) {
+            if (!result.contains(a)) result.add(a);
         }
-        String a;
-        int kezd=0;
-        for (i = kezd; i < second.size(); i++) {
-            cont = true;
-            a = second.get(i);
-            for (String b : result) {
-                if (a.equals(b)) {
-                    cont = false;
-                    break;
-                }
-            }
-            if (cont) result.add(a);
+        for (String a : second) {
+            if (!result.contains(a)) result.add(a);
+
         }
         return result;
     }
 }
+
 
 
