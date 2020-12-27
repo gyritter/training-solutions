@@ -1,6 +1,7 @@
 package week06d01;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,6 +11,7 @@ public class ListSeelectorTest {
 
     ListSelector lista = new ListSelector();
     List<String> próba = Arrays.asList("takács", "bognár","bodnár","kefekötő", "felcser");
+    //List<String> próba = new ArrayList<>();
 
     @Test
     public void listSelectorTest() {

@@ -16,7 +16,7 @@ public class StudentTest {
 
     @Test
     public void emptyNameShouldThrowException() throws IllegalArgumentException {
-//?
+
         Exception ex = assertThrows(IllegalArgumentException.class, () -> new Student(""));
         assertEquals("Student name must not be empty!", ex.getMessage());
     }
