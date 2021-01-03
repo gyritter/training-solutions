@@ -2,26 +2,25 @@ package week06d05;
 
 public class Biscuit {
 
-    private static BiscuitType type;
-    private static int gramAmount;
+    private  BiscuitType type;
+    private  int gramAmount;
 
-    public static void of(BiscuitType type, int gramAmount){
-        type=type;
-        gramAmount=gramAmount;
+    public Biscuit(BiscuitType type, int gramAmount) {
+        this.type = type;
+        this.gramAmount = gramAmount;
     }
 
-    public static BiscuitType getType() {
+    public BiscuitType getType() {
         return type;
     }
 
-    public static int getGramAmount() {
+    public int getGramAmount() {
         return gramAmount;
     }
 
-    public static void print(){
-        System.out.println(type +" "+gramAmount);
+    public static Biscuit of(BiscuitType type, int gramAmount){
+        return new Biscuit(type, gramAmount);
     }
-
 }
 
 

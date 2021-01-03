@@ -1,11 +1,11 @@
 package catalog;
 
 public class SearchCriteria {
-/*
-    private String contributor;
-    private String title;
 
-    public SearchCriteria(String contributor, String title) {
+    private final String contributor;
+    private final String title;
+
+    private SearchCriteria(String contributor, String title) {
         this.contributor = contributor;
         this.title = title;
     }
@@ -19,23 +19,24 @@ public class SearchCriteria {
     }
 
     public static SearchCriteria createByBoth(String contributor, String title){
-        this.title = title;
-        if(!SearchCriteria.hasContributor() || !this.hasTitle()){
-            throw new IllegalArgumentException();
+        if(Validators.isBlank(contributor) || Validators.isBlank(title)){
+            throw new IllegalArgumentException("I need parameters");
         }
+        return new SearchCriteria(title, contributor);
     }
 
     public static SearchCriteria createByContributor(String contributor){
-        if(!this.hasContributor()){
-            throw new IllegalArgumentException();
+        if(Validators.isBlank(contributor)){
+            throw new IllegalArgumentException("I need contributor parameter");
         }
+        return new SearchCriteria(contributor,"");
     }
 
     public static SearchCriteria createByTitle(String title){
-        if(!this.hasTitle()){
-            throw new IllegalArgumentException();
+        if(Validators.isBlank(title)){
+            throw new IllegalArgumentException("I need title parameter");
         }
-        return SearchCriteria;
+        return new SearchCriteria("", title);
     }
 
     public boolean hasContributor(){
@@ -47,6 +48,5 @@ public class SearchCriteria {
         if(title==null || title.length()==0) return false;
         return true;
     }
-    */
- 
+
 }

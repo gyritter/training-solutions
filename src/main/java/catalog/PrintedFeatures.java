@@ -14,10 +14,10 @@ public class PrintedFeatures implements Feature{
             throw new IllegalArgumentException("Empty title");
         }
         if (Validators.isEmpty(authors)){
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Empty author list");
         }
         if (numberOfPages<0){
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("0 pagenumber");
         }
         this.authors = authors;
         this.numberOfPages = numberOfPages;

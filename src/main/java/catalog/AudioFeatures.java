@@ -13,13 +13,13 @@ public class AudioFeatures implements Feature{
 
     public AudioFeatures(String title, int length,  List<String> performers, List<String> composer) {
         if(Validators.isBlank(title)){
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Empty title");
         }
         if (Validators.isEmpty(performers)){
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Empty performer list");
         }
         if (length<0){
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("0 length");
         }
         this.title = title;
         this.length = length;
@@ -29,13 +29,13 @@ public class AudioFeatures implements Feature{
 
     public AudioFeatures(String title, int length,  List<String> performers) {
         if(Validators.isBlank(title)){
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Empty title");
         }
         if (Validators.isEmpty(performers)){
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Empty performer list");
         }
         if (length<0){
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("0 length");
         }
         this.title = title;
         this.length = length;
