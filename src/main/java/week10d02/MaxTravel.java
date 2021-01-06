@@ -20,6 +20,4 @@ public class MaxTravel {
         }
         return bStop;
     }
-
-
 }
