@@ -30,13 +30,13 @@ public class Cv {
         }
     }
 
-    public int findSkillLevelByName(String skillName){
+    public int findSkillLevelByName(String skillName) {
         for(Skill s:skills){
             if (s.getName().equals(skillName)){
                 return s.getLevel();
             }
         }
-        return 0;
-       // throw new SkillNotFoundException();
+        throw new IllegalArgumentException();
     }
+
 }
