@@ -5,21 +5,21 @@ import java.util.List;
 
 public class WordFilter {
 
-    public List<String> wordsWithChar(List<String> words, char c){
+    public List<String> wordsWithChar(List<String> words, char c) {
 
-      List<String> result= new ArrayList();
+        List<String> result = new ArrayList();
 
-         String s= Character.toString(c)
+        String s = Character.toString(c);
 
-        for (String word:words){
+        for (String word : words) {
 
-            if  (word.contains(s)){
+            if (word.contains(s)) {
 
-                result.add(word;
+                result.add(word);
             }
 
         }
-        return result
+        return result;
     }
 
 }
