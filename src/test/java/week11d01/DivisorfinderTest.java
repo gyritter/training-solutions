@@ -6,10 +6,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DivisorfinderTest {
     @Test
-    public void DivisorTest(){
-    Divisorfinder divisorfinder= new Divisorfinder();
+    public void DivisorTest() {
+        Divisorfinder divisorfinder = new Divisorfinder();
 
         assertEquals(1, divisorfinder.findDivisors(4025));
 
-}
+    }
 }

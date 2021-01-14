@@ -19,10 +19,10 @@ public class Courier {
         if (adds.getDay() < rides.get(rides.size() - 1).getDay()) {
             throw new IllegalArgumentException("Korábbi nap");
         }
-            if (adds.getRound() > rides.get(rides.size() - 1).getRound() ||
-                    adds.getDay() > rides.get(rides.size() - 1).getDay() ) {
-                rides.add(adds);
-            } else throw new IllegalArgumentException("Korábbi fuvar");
+        if (adds.getRound() > rides.get(rides.size() - 1).getRound() ||
+                adds.getDay() > rides.get(rides.size() - 1).getDay()) {
+            rides.add(adds);
+        } else throw new IllegalArgumentException("Korábbi fuvar");
 
     }
 
@@ -37,6 +37,4 @@ public class Courier {
         }
         return 0;
     }
-
-    ;
 }
