@@ -7,7 +7,7 @@ public class GradeRounder {
 
        for (int i=0; i<grades.length; i++){
 
-          if(grades[i]>40 &&((5*grades[i]/5+5)-grades[i]<3)){
+          if(grades[i]>40 &&(((5*grades[i]/5+5)-grades[i])<3)){
               grades[i]=5*((grades[i]/5)+1);
           }
        }
