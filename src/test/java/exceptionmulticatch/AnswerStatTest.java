@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 public class AnswerStatTest {
 
-    /*@Test
+    @Test
     public void convertNullShouldThrowException() {
         AnswerStat answerStat = new AnswerStat(new BinaryStringConverter());
         Exception ex = assertThrows(InvalidBinaryStringException.class, () -> answerStat.convert(null));
@@ -35,6 +35,6 @@ public class AnswerStatTest {
 
         assertEquals(50, answerStat.answerTruePercent("11000101"));
         assertEquals(80, answerStat.answerTruePercent("1111111100"));
-    }*/
+    }
 
 }

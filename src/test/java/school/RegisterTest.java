@@ -53,7 +53,4 @@ class RegisterTest {
         assertEquals("average: 4.0", avgTestList.get(avgTestList.size() - 1));
 
     }
-
-
-
 }
