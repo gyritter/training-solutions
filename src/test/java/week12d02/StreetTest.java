@@ -26,6 +26,4 @@ class StreetTest {
         assertEquals(2,results[1].getNumber());
 
     }
-
-
 }
