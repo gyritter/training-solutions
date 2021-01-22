@@ -56,7 +56,6 @@ public class NumberStat {
             numbers.add(Integer.parseInt(s));
         }
     }
-
 }
 
 
