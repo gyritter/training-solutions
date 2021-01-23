@@ -1,6 +1,4 @@
-package Filescanner;
-
-import static org.junit.jupiter.api.Assertions.*;
+package iofilestest;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package Filescanner;
+package iofilestest;
 
 public class Book {
     private String author;

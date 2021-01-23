@@ -1,4 +1,4 @@
-package Filescanner;
+package iofilestest;
 
 import java.io.*;
 import java.nio.file.Files;
