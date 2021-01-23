@@ -1,4 +1,4 @@
-package longwords;
+package iostringwriter;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package idread;
+package ioreader;
 
 import org.junit.jupiter.api.Test;
 
