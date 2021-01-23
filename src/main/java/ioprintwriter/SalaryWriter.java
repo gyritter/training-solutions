@@ -1,4 +1,4 @@
-package salary;
+package ioprintwriter;
 
 import java.io.IOException;
 import java.io.PrintWriter;
