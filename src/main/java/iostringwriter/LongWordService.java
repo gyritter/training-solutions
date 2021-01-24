@@ -15,7 +15,8 @@ public class LongWordService {
                 writer.write(Integer.toString(word.length()));
                 writer.write("\n");
             }
-        } catch (IOException ioe) {
+        }
+        catch (IOException ioe) {
             throw new IllegalStateException("Can not read file", ioe);
         }
     }
