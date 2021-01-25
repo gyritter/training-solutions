@@ -22,4 +22,41 @@ public class KoronaSearcher {
         }
         System.out.println(count);
     }
+
+    public int SearchWord(Path path, String word) {
+        int count=0;
+        try (BufferedReader reader = Files.newBufferedReader(path)) {
+            String line;
+            while((line = reader.readLine()) != null) {
+                if (line.contains(word)) count++;
+            }
+        }
+        catch (IOException ioe) {
+            throw new IllegalStateException("Can not read file", ioe);
+        }
+        return count;
+    }
+
+    public int SearchWordWithReader(BufferedReader reader, String word) {
+        int count=0;
+        /* ide nem kell a try with resources; ahol példányosítom a BufferedReadert, oda kell
+           a Bufferedreaderbe becsomagolható egy InputStreamReader is, és egy clssPathReader is
+           az InputStream lehet:
+           - file (Path-ként),
+           - file a classPath-ról
+           - memóriaterület (StringReader),
+           - URL stream,
+            */
+        try {
+            String line;
+            while((line = reader.readLine()) != null) {
+                if (line.contains(word)) count++;
+            }
+        }
+        catch (IOException ioe) {
+            throw new IllegalStateException("Can not read file", ioe);
+        }
+        return count;
+    }
+
 }
