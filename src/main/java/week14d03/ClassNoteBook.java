@@ -12,6 +12,8 @@ public class ClassNoteBook {
         this.students = students;
     }
 
+
+
     public List<Student> sortNotebook() {
         List<Student> result = new ArrayList<>();
         for (Student s : students) {
@@ -20,6 +22,7 @@ public class ClassNoteBook {
         }
         Collections.sort(result);
         return result;
+
     }
 
     public static void main(String[] args) {
@@ -29,17 +32,20 @@ public class ClassNoteBook {
         s.add(new Student("Kata"));
         s.add(new Student("Bálint"));
         ClassNoteBook classNoteBook = new ClassNoteBook(s);
-        StringBuilder sb = new StringBuilder();
+       /* StringBuilder sb = new StringBuilder();
         for(Student x:s){
             sb.append(x.getName()+" ");
         }
         sb.append("\n");
-        List<Student> s2 = new ArrayList<>();
-        s2 = classNoteBook.sortNotebook();
+
         for(Student x:s2){
             sb.append(x.getName()+" ");
         }
-        System.out.println(sb.toString());
+        System.out.println(sb.toString());*/
+        System.out.println(s.toString());
+        List<Student> s2 = new ArrayList<>();
+        s2 = classNoteBook.sortNotebook();
+        System.out.println(s2.toString());
     }
 
 }

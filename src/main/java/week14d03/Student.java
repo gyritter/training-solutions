@@ -28,6 +28,14 @@ public class Student implements Comparable <Student>{
         return marks;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", marks=" + marks +
+               '}';
+    }
+
     public void addMark(String subject, int mark) {
         if (!(marks.containsKey(subject))) {
             marks.put(subject, new ArrayList<>());
