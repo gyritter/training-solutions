@@ -14,7 +14,7 @@ public class Statistics {
         try {
 
             String line;
-            br.readLine(); //a fejlécert eldobja
+            br.readLine(); //a fejlécert eldobja, ezt csak beolvassa de nem dolgozza fel
             while ((line = br.readLine()) != null) {
                 if (line.contains("Hungary")) {
                     datas.add(processLine(line));
@@ -24,7 +24,6 @@ public class Statistics {
         } catch (IOException ioe) {
             throw new IllegalArgumentException("Can not read from file");
         }
-
 
     }
 
