@@ -3,13 +3,13 @@ package exam03;
 public enum CruiseClass {
     LUXURY(3.0), FIRST(1.8), SECOND(1.0);
 
-    public final double multiplyer;
+    private final double multiplier;
 
-    CruiseClass(double multiplyer) {
-        this.multiplyer = multiplyer;
+    CruiseClass(double multiplier) {
+        this.multiplier = multiplier;
     }
 
-    public double getMultiplyer() {
-        return multiplyer;
+    public double getMultiplier() {
+        return multiplier;
     }
 }

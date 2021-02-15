@@ -51,7 +51,7 @@ public class CruiseTest {
         assertEquals(100_000, price, 0.5);
     }
 
-    /*@Test
+    @Test
     void findPassengerByName() {
         cruise.bookPassenger(new Passenger("John Doe", CruiseClass.LUXURY));
         cruise.bookPassenger(new Passenger("Jack Doe", CruiseClass.FIRST));
@@ -88,5 +88,5 @@ public class CruiseTest {
 
         Map<CruiseClass, Integer> result = cruise.countPassengerByClass();
         assertEquals(Map.of(CruiseClass.LUXURY, 2 , CruiseClass.FIRST, 1), result);
-    }*/
+    }
 }

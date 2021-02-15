@@ -3,9 +3,9 @@ package exam03;
 public class Passenger {
 
     private String name;
-    private Enum<CruiseClass> cruiseClass;
+    private CruiseClass cruiseClass;
 
-    public Passenger(String name, Enum<CruiseClass> cruiseClass) {
+    public Passenger(String name, CruiseClass cruiseClass) {
         this.name = name;
         this.cruiseClass = cruiseClass;
     }
@@ -14,7 +14,7 @@ public class Passenger {
         return name;
     }
 
-    public Enum<CruiseClass> getCruiseClass() {
+    public CruiseClass getCruiseClass() {
         return cruiseClass;
     }
 
