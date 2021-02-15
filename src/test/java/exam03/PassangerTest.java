@@ -6,10 +6,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PassangerTest {
 
-   /* @Test
+   @Test
     void create() {
         Passenger passenger = new Passenger("John Doe", CruiseClass.LUXURY);
         assertEquals("John Doe", passenger.getName());
         assertEquals(CruiseClass.LUXURY, passenger.getCruiseClass());
-    }*/
+    }
 }

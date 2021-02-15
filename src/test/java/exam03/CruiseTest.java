@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CruiseTest {
 
-    /*private Boat boat = new Boat("WetDreams", 5);
+    private Boat boat = new Boat("WetDreams", 5);
 
     private Cruise cruise = new Cruise(boat, LocalDate.of(2021, 1, 1), 100_000);
 
@@ -30,7 +30,7 @@ public class CruiseTest {
         assertEquals("John Doe", cruise.getPassengers().get(0).getName());
     }
 
-    @Test
+   @Test
     void overBooking() {
         for (int i = 0; i < 5; i++) {
             cruise.bookPassenger(new Passenger("John Doe", CruiseClass.LUXURY));
@@ -39,7 +39,7 @@ public class CruiseTest {
                 () -> cruise.bookPassenger(new Passenger("John Doe", CruiseClass.LUXURY)));
     }
 
-    @Test
+   @Test
     void getPriceForPassenger() {
         double price = cruise.getPriceForPassenger(new Passenger("John Doe", CruiseClass.LUXURY));
         assertEquals(300_000, price, 0.5);
@@ -51,7 +51,7 @@ public class CruiseTest {
         assertEquals(100_000, price, 0.5);
     }
 
-    @Test
+    /*@Test
     void findPassengerByName() {
         cruise.bookPassenger(new Passenger("John Doe", CruiseClass.LUXURY));
         cruise.bookPassenger(new Passenger("Jack Doe", CruiseClass.FIRST));
